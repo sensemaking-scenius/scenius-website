@@ -1,0 +1,591 @@
+/* ========================================
+   Sensemaking Scenius - Clean CSS
+   ======================================== */
+
+/* ----------------------------------------
+   CSS Custom Properties (Variables)
+   ---------------------------------------- */
+:root {
+  /* Colors */
+  --color-background: rgb(129, 215, 192);
+  --color-text-primary: #ffffff;
+  --color-text-accent: #e066a0;
+  --color-button-bg: #4a5e52;
+  --color-button-text: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.24);
+  
+  /* Typography */
+  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-size-base: 18px;
+  --font-size-medium: 24px;
+  --font-size-large: 32px;
+  --font-size-xlarge: 48px;
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+  --spacing-xl: 96px;
+  
+  /* Layout */
+  --max-width: 700px;
+  --section-padding: 80px 20px;
+}
+
+/* ----------------------------------------
+   Reset & Base Styles
+   ---------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ----------------------------------------
+   Layout
+   ---------------------------------------- */
+main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ----------------------------------------
+   Typography
+   ---------------------------------------- */
+.text {
+  margin-bottom: var(--spacing-xs);
+}
+
+.text--medium {
+  font-size: var(--font-size-medium);
+}
+
+.text--large {
+  font-size: var(--font-size-large);
+}
+
+.text--xlarge {
+  font-size: var(--font-size-xlarge);
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.text--pink {
+  color: var(--color-text-accent);
+}
+
+.text--shadow {
+  text-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+.text--center {
+  text-align: center;
+}
+
+/* ----------------------------------------
+   Content Alignment
+   ---------------------------------------- */
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.content--left {
+  text-align: left;
+}
+
+.content--right {
+  text-align: right;
+}
+
+.content--center {
+  text-align: center;
+}
+
+.content--bottom {
+  margin-top: var(--spacing-lg);
+}
+
+/* ----------------------------------------
+   Decorations
+   ---------------------------------------- */
+.decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.butterfly {
+  width: 60px;
+  height: auto;
+}
+
+.butterfly--top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.butterfly--mid-right {
+  top: 120px;
+  right: 80px;
+}
+
+.butterfly--bottom {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.butterfly--top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.butterfly--mid-left {
+  top: 100px;
+  left: 60px;
+}
+
+.butterfly--top {
+  top: 10px;
+  left: 30%;
+}
+
+/* Computer decoration */
+.decoration-wrapper--computer {
+  position: relative;
+  width: 200px;
+  margin: var(--spacing-md) 0;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 140px solid #e8b8d4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  z-index: 0;
+}
+
+.computer {
+  position: relative;
+  z-index: 1;
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* Lightbulb */
+.lightbulb {
+  width: 80px;
+  left: 20%;
+  top: 30%;
+}
+
+/* Sun */
+.sun {
+  width: 100px;
+}
+
+.sun--right {
+  right: 0;
+  top: 20px;
+}
+
+/* Plant */
+.decoration-wrapper--plant {
+  position: relative;
+  width: 120px;
+  margin-left: auto;
+}
+
+.star {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #e8b8d4;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.plant {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+}
+
+/* Flower */
+.flower {
+  width: 100px;
+}
+
+.flower--left {
+  left: 10%;
+  top: 20%;
+}
+
+/* Sparkles */
+.sparkles {
+  width: 200px;
+  top: 0;
+  right: 10%;
+  opacity: 0.8;
+}
+
+/* Lightning */
+.lightning {
+  position: absolute;
+  width: 60px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ----------------------------------------
+   GIF Window (using pre-made GIF image)
+   ---------------------------------------- */
+.gif-window-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: var(--spacing-md) auto;
+  transform: rotate(-5deg);
+}
+
+.gif-exe-image {
+  width: 100%;
+  display: block;
+  box-shadow: 4px 4px 20px var(--color-shadow);
+}
+
+.gif-window__overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+/* ----------------------------------------
+   Spirals
+   ---------------------------------------- */
+.spirals {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.spiral {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.spiral--1 {
+  top: 10%;
+  left: 20%;
+}
+
+.spiral--2 {
+  top: 45%;
+  left: 40%;
+}
+
+.spiral--3 {
+  top: 50%;
+  left: 50%;
+}
+
+.spiral--4 {
+  top: 52%;
+  left: 60%;
+}
+
+.spiral--5 {
+  top: 60%;
+  left: 10%;
+}
+
+.spiral--6 {
+  top: 55%;
+  right: 15%;
+}
+
+.spiral--7 {
+  top: 58%;
+  right: 10%;
+}
+
+/* ----------------------------------------
+   Tarot Card
+   ---------------------------------------- */
+.tarot-card {
+  position: relative;
+  width: 150px;
+  margin: var(--spacing-md) auto;
+}
+
+.tarot-card__image {
+  width: 100%;
+}
+
+.tarot-card__speech {
+  position: absolute;
+  bottom: 30%;
+  right: -60px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* ----------------------------------------
+   Zoom Screenshot
+   ---------------------------------------- */
+.zoom-screenshot {
+  width: 100%;
+  max-width: 500px;
+  margin: var(--spacing-md) auto;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 40px var(--color-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.zoom-screenshot img {
+  width: 100%;
+}
+
+/* ----------------------------------------
+   Greenhouse Image
+   ---------------------------------------- */
+.greenhouse-image {
+  width: 100%;
+  max-width: 500px;
+  margin: var(--spacing-md) auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--color-shadow);
+}
+
+.greenhouse-image img {
+  width: 100%;
+}
+
+/* ----------------------------------------
+   CTA Section
+   ---------------------------------------- */
+.cta-bubble {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-md);
+  border-radius: 40px;
+  text-align: center;
+  width: fit-content;
+  margin: var(--spacing-lg) auto;
+}
+
+.cta-bubble__pointer {
+  position: absolute;
+  width: 40px;
+  right: -30px;
+  bottom: -10px;
+}
+
+.cta-bubble__hand {
+  position: absolute;
+  width: 40px;
+  right: -50px;
+  top: 10px;
+}
+
+/* ----------------------------------------
+   Button
+   ---------------------------------------- */
+.button {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.button--cta {
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
+  margin: var(--spacing-md) auto;
+  display: block;
+  width: fit-content;
+}
+
+/* ----------------------------------------
+   Section-specific Styles
+   ---------------------------------------- */
+.section--intro {
+  padding-top: var(--spacing-xl);
+}
+
+.section--boiled {
+  min-height: 80vh;
+}
+
+.section--lost {
+  min-height: 100vh;
+}
+
+.section--destroyed {
+  min-height: 80vh;
+}
+
+.section--rebuild {
+  min-height: 90vh;
+}
+
+.section--community {
+  min-height: 90vh;
+}
+
+.section--vision {
+  min-height: 100vh;
+}
+
+.section--abode {
+  min-height: 100vh;
+  gap: var(--spacing-lg);
+}
+
+.section--cta {
+  min-height: 60vh;
+  padding-bottom: var(--spacing-xl);
+}
+
+/* ----------------------------------------
+   Responsive Design
+   ---------------------------------------- */
+@media (max-width: 600px) {
+  :root {
+    --font-size-large: 24px;
+    --font-size-xlarge: 36px;
+    --section-padding: 60px 16px;
+  }
+  
+  .spiral {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .gif-window {
+    max-width: 90%;
+  }
+  
+  .zoom-screenshot,
+  .greenhouse-image {
+    max-width: 100%;
+  }
+  
+  .tarot-card__speech {
+    right: -40px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+/* ----------------------------------------
+   Animations (optional, for later)
+   ---------------------------------------- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.butterfly {
+  animation: float 3s ease-in-out infinite;
+}
+
+.butterfly--mid-right {
+  animation-delay: 0.5s;
+}
+
+.butterfly--bottom {
+  animation-delay: 1s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Uncomment to enable spin animation on sun
+.sun {
+  animation: spin 20s linear infinite;
+}
+*/
