@@ -1,0 +1,22 @@
+.DS_Store
+.playwright-mcp/
+serve_local.sh
+
+# Root-level screenshots (not part of the site)
+/*.png
+
+# Source/reference copies of original site
+raw_ressources/
+original/
+
+# Unused images (not referenced in index.html)
+site/assets/images/1pv4agz.png
+site/assets/images/9d3arw.png
+site/assets/images/giphy(1).gif
+site/assets/images/giphy(3).gif
+site/assets/images/giphy(5).gif
+site/assets/images/giphy(6).gif
+site/assets/images/giphy(7).gif
+site/assets/images/giphy(9).gif
+site/assets/images/giphy(10).gif
+site/assets/images/giphy(11).gif

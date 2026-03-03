@@ -13,23 +13,26 @@
   --color-button-bg: #4a5e52;
   --color-button-text: #ffffff;
   --color-shadow: rgba(0, 0, 0, 0.24);
-  
-  /* Typography */
-  --font-primary: 'Playfair Display', Georgia, serif;
-  --font-size-base: 18px;
-  --font-size-medium: 24px;
-  --font-size-large: 32px;
-  --font-size-xlarge: 48px;
-  
+
+  /* Typography - using vw-based scaling for responsive sizing */
+  --font-primary: 'Calistoga', Georgia, serif;
+  --font-glitch: 'Rubik Glitch', cursive;
+  --font-size-base: clamp(18px, 2.5vw, 22px);
+  --font-size-medium: clamp(24px, 3.5vw, 32px);
+  --font-size-large: clamp(32px, 5vw, 44px);
+  --font-size-xlarge: clamp(42px, 6.5vw, 56px);
+  --font-size-title: clamp(56px, 9vw, 80px);
+  --font-size-small: 14px;
+
   /* Spacing */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
   --spacing-md: 32px;
   --spacing-lg: 64px;
   --spacing-xl: 96px;
-  
+
   /* Layout */
-  --max-width: 700px;
+  --max-width: 800px;
   --section-padding: 80px 20px;
 }
 
@@ -38,6 +41,11 @@
    ---------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -52,8 +60,11 @@ body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
   line-height: 1.4;
-  min-height: 100vh;
+}
+
+.page-wrapper {
   overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -67,11 +78,22 @@ a {
   text-decoration: none;
 }
 
+.link--plain {
+  color: rgb(0, 0, 238);
+  text-decoration: underline;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid var(--color-button-bg);
+  border-radius: 4px;
+}
+
 /* ----------------------------------------
    Layout
    ---------------------------------------- */
 main {
-  width: 100%;
+  width: 90%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
@@ -93,6 +115,10 @@ main {
   margin-bottom: var(--spacing-xs);
 }
 
+.text--small-medium {
+  font-size: clamp(18px, 2.8vw, 24px);
+}
+
 .text--medium {
   font-size: var(--font-size-medium);
 }
@@ -105,6 +131,18 @@ main {
   font-size: var(--font-size-xlarge);
 }
 
+.text--title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.text--small {
+  font-size: var(--font-size-small);
+  line-height: 1.6;
+}
+
 .text--bold {
   font-weight: 700;
 }
@@ -115,6 +153,10 @@ main {
 
 .text--pink {
   color: var(--color-text-accent);
+}
+
+.text--glitch {
+  font-family: var(--font-glitch);
 }
 
 .text--shadow {
@@ -332,43 +374,59 @@ main {
 
 .spiral {
   position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+/* Upper cluster - near "we're lost" */
+.spiral--1 {
+  top: 18%;
+  right: 5%;
+  width: 90px;
+  height: 90px;
+}
+
+.spiral--2 {
+  top: 22%;
+  right: 20%;
   width: 80px;
   height: 80px;
 }
 
-.spiral--1 {
-  top: 10%;
-  left: 20%;
-}
-
-.spiral--2 {
-  top: 45%;
-  left: 40%;
-}
-
 .spiral--3 {
-  top: 50%;
-  left: 50%;
+  top: 15%;
+  right: 35%;
+  width: 85px;
+  height: 85px;
 }
 
+/* Lower cluster - near "trading our attention" */
 .spiral--4 {
-  top: 52%;
-  left: 60%;
+  top: 55%;
+  left: 5%;
+  width: 110px;
+  height: 110px;
 }
 
 .spiral--5 {
-  top: 60%;
-  left: 10%;
+  top: 52%;
+  left: 25%;
+  width: 100px;
+  height: 100px;
 }
 
 .spiral--6 {
-  top: 55%;
-  right: 15%;
+  top: 60%;
+  right: 20%;
+  width: 95px;
+  height: 95px;
 }
 
 .spiral--7 {
   top: 58%;
-  right: 10%;
+  right: 5%;
+  width: 105px;
+  height: 105px;
 }
 
 /* ----------------------------------------
@@ -478,6 +536,59 @@ main {
   margin: var(--spacing-md) auto;
   display: block;
   width: fit-content;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  border: none;
+}
+
+.button--cta-pill {
+  background: #ffffff;
+  color: rgb(207, 92, 215);
+  border: none;
+  border-radius: 0;
+  padding: 50px 100px;
+  font-family: var(--font-primary);
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-lg) auto;
+}
+
+/* ----------------------------------------
+   Title Block
+   ---------------------------------------- */
+.title-block {
+  margin-top: var(--spacing-lg);
+}
+
+/* ----------------------------------------
+   Footer / Credits
+   ---------------------------------------- */
+.footer {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.credits {
+  margin-bottom: var(--spacing-md);
+}
+
+.credit-link {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: var(--spacing-md);
+  font-size: 12px;
+}
+
+.email {
+  margin-top: var(--spacing-xs);
+  font-size: 10px;
 }
 
 /* ----------------------------------------
@@ -497,6 +608,7 @@ main {
 
 .section--destroyed {
   min-height: 80vh;
+  gap: var(--spacing-lg);
 }
 
 .section--rebuild {
@@ -526,28 +638,26 @@ main {
    ---------------------------------------- */
 @media (max-width: 600px) {
   :root {
-    --font-size-large: 24px;
-    --font-size-xlarge: 36px;
     --section-padding: 60px 16px;
   }
-  
+
   .spiral {
     width: 60px;
     height: 60px;
   }
-  
-  .gif-window {
+
+  .gif-window-wrapper {
     max-width: 90%;
   }
-  
+
   .zoom-screenshot,
   .greenhouse-image {
     max-width: 100%;
   }
-  
-  .tarot-card__speech {
-    right: -40px;
-    padding: var(--spacing-xs) var(--spacing-sm);
+
+  .button--cta-pill {
+    padding: 30px 60px;
+    font-size: 24px;
   }
 }
 
