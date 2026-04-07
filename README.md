@@ -6,7 +6,7 @@ The community website for The Sensemaking Scenius — a community of practice fo
 
 ## Background
 
-The original website was built by Kristen on [mmm.page](https://mmm.page). In our [Feb 12, 2026 workshop](https://github.com/sensemaking-scenius/website-ressource/issues), the community agreed to rebuild it as an open-source project so that anyone can contribute via pull requests.
+The original website was built by Kristen on [mmm.page](https://mmm.page). In our [Feb 12, 2026 workshop](https://www.notion.so/m4co/Website-Workshop-30596ae9065580dda873d6b2120a6eef), the community agreed to rebuild it as an open-source project so that anyone can contribute via pull requests.
 
 This repo is that rebuild. Alexandre downloaded the original HTML and used Claude to reconstruct clean CSS/HTML — that's the `raw_ressources/` (original export) and `site/` (clean reconstruction) directories. Jon then structured it for GitHub Pages deployment.
 
@@ -39,7 +39,7 @@ For larger changes, Claude Code or any LLM can help — just point it at the rep
 
 ## Roadmap
 
-Based on the [Feb 12, 2026 workshop](https://kpaxle.mmm.page/scenius) decisions. Issues track all planned work.
+Based on the [Feb 12, 2026 workshop](https://www.notion.so/m4co/Website-Workshop-30596ae9065580dda873d6b2120a6eef) decisions. Issues track all planned work.
 
 ### V1 — Faithful Reproduction (current)
 
