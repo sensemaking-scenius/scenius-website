@@ -1,8 +1,8 @@
 # The Sensemaking Scenius Website
 
-The community website for [The Sensemaking Scenius](https://kpaxle.mmm.page/scenius) — a community of practice for digital builders, researchers, artists & activists who share a vision of a regenerative, intentional & meaningful internet.
+The community website for The Sensemaking Scenius — a community of practice for digital builders, researchers, artists & activists who share a vision of a regenerative, intentional & meaningful internet.
 
-**Live:** https://sensemaking-scenius.github.io/website-ressource/
+**Live:** https://www.scenius.space/
 
 ## Background
 
@@ -70,7 +70,7 @@ Each member can pilot their own subpage linked from the main page — they can l
 
 ## Domain
 
-The target domain is **scenius.space** (currently pointing at a separate Quartz site). Once V1 is polished, the domain will be moved to point at this GitHub Pages deployment.
+Custom domain **www.scenius.space** is live and pointing at this repo's GitHub Pages deployment.
 
 ## Design Inspiration
 
