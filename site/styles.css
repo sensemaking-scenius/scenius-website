@@ -617,45 +617,38 @@ main {
   font-size: clamp(28px, 5vw, 40px);
   font-style: italic;
   line-height: 1.1;
+  color: #2a2a2a;
 }
 
 .about-header__home {
   font-family: var(--font-sans);
   font-size: 16px;
   text-decoration: underline;
+  color: #2a2a2a;
 }
 
 .about-section {
-  padding: 50px 0;
+  padding: 40px 0;
   position: relative;
 }
 
 .about-section__heading {
   font-family: var(--font-display);
   font-size: clamp(32px, 6vw, 44px);
-  margin-bottom: 30px;
-  position: relative;
+  margin-bottom: 24px;
   display: inline-block;
-}
-
-.about-section__heading::before {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: -8px;
-  right: -8px;
-  height: 60%;
-  background: rgba(129, 215, 192, 0.5);
-  border-radius: 8px;
-  z-index: -1;
+  background: rgba(0, 80, 60, 0.25);
+  padding: 8px 20px;
+  border-radius: 12px;
+  color: #2a2a2a;
 }
 
 .about-text {
   font-family: var(--font-body);
   font-size: clamp(18px, 2.5vw, 22px);
   line-height: 1.7;
-  margin-bottom: 20px;
-  color: var(--color-text);
+  margin-bottom: 18px;
+  color: #2a2a2a;
 }
 
 .about-text--large {
@@ -666,16 +659,17 @@ main {
 .about-list {
   list-style: none;
   padding: 0;
-  margin: 24px 0;
+  margin: 20px 0;
 }
 
 .about-list li {
   font-family: var(--font-body);
   font-size: clamp(18px, 2.5vw, 22px);
   line-height: 1.7;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   padding-left: 24px;
   position: relative;
+  color: #2a2a2a;
 }
 
 .about-list li::before {
@@ -685,36 +679,53 @@ main {
 }
 
 .about-cta {
-  background: rgba(207, 92, 215, 0.15);
-  border-radius: 16px;
-  padding: 32px;
+  background: rgba(180, 120, 200, 0.35);
+  border-radius: 20px;
+  padding: 36px 32px;
   margin: 32px 0;
   text-align: center;
 }
 
+.about-cta .about-text {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+.about-cta .about-text:first-child {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+}
+
 .about-cta a {
-  color: rgb(0, 0, 238);
+  color: rgb(0, 0, 200);
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .about-principles {
-  margin: 24px 0;
+  margin: 20px 0;
 }
 
 .about-principle {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .about-principle__title {
   font-family: var(--font-display);
   font-size: clamp(20px, 3vw, 26px);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  color: #2a2a2a;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .about-principle__text {
   font-family: var(--font-body);
   font-size: clamp(17px, 2.3vw, 20px);
   line-height: 1.7;
+  color: #2a2a2a;
 }
 
 .about-footer {
@@ -726,4 +737,5 @@ main {
   font-family: var(--font-sans);
   font-size: 14px;
   margin-bottom: 6px;
+  color: #2a2a2a;
 }
