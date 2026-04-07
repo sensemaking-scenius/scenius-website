@@ -51,6 +51,7 @@ Migrate the existing mmm.page site into a community-editable, open-source format
 - [ ] [CSS polish: visual comparison pass](https://github.com/sensemaking-scenius/website-ressource/issues/1)
 - [ ] [Migrate to 11ty](https://github.com/sensemaking-scenius/website-ressource/issues/2)
 - [ ] [Contributor guide](https://github.com/sensemaking-scenius/website-ressource/issues/8)
+- [ ] [PR preview deployments + Telegram approval flow](https://github.com/sensemaking-scenius/website-ressource/issues/13)
 
 ### V2 — Brand Upgrade
 
@@ -67,6 +68,8 @@ Each member can pilot their own subpage linked from the main page — they can l
 - [ ] [Professional subpage for funders/grants](https://github.com/sensemaking-scenius/website-ressource/issues/5)
 - [ ] [Project subpages](https://github.com/sensemaking-scenius/website-ressource/issues/6)
 - [ ] [Member directory](https://github.com/sensemaking-scenius/website-ressource/issues/7)
+- [ ] [Surface Knowledge Graph content](https://github.com/sensemaking-scenius/website-ressource/issues/11)
+- [ ] [Integrate Portico co-presence app](https://github.com/sensemaking-scenius/website-ressource/issues/12)
 
 ## Domain
 
